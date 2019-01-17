@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder | Survey</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+    <!------------------MODAL START-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Your Best Friend!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 id = 'friendName'></h1>
+              <!-- <img id = 'friendImage'  alt="best friend"> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class='container col-md-4 mt-4'>
+        <form id = 'topForm'>
+
+            <div class='row'>
+                <div class='col'>
+                    <input id='nameInput' type="text" class="form-control" placeholder="First Name (required)">
+                </div>
+            </div><br>
+        </form><br>
+        <h4>Question 1</h4>
+        <p>How likely are you to wake up tomorrow?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q1">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 2</h4>
+        <p>will you drink coffee tomorrow?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q2">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 3</h4>
+        <p>do you like dogs?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q3">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 4</h4>
+        <p>do you like cats?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q4">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 5</h4>
+        <p>Chug a beer upside down this weekend?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q5">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 6</h4>
+        <p>Eat 20 chicken wings in one sitting?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q6">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 7</h4>
+        <p> Will you eat a salad tomorrow?</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q7">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 8</h4>
+        <p>I hate it when it rains</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q8">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 9</h4>
+        <p>I love to just sit at home and do nothing</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q9">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Question 10</h4>
+        <p>I like to speed on the freeway.</p>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="q10">
+                    <option>1 (strongly disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (strongly Agree)</option>
+                </select>
+            </div>
+        </form>
+        <button id='submit-button' type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#submit-button').on('click', function (e) {
+            e.preventDefault();
+            if( $('#nameInput').val()==='' ){
+                alert('Please answer all questions')
+                return false;
+            }else{
+            
+            var newMember = {
+                name: $('#nameInput').val().trim(),
+                scores: [
+                    parseInt($('#q1').val().trim()),
+                    parseInt($('#q2').val().trim()),
+                    parseInt($('#q3').val().trim()),
+                    parseInt($('#q4').val().trim()),
+                    parseInt($('#q5').val().trim()),
+                    parseInt($('#q6').val().trim()),
+                    parseInt($('#q7').val().trim()),
+                    parseInt($('#q8').val().trim()),
+                    parseInt($('#q9').val().trim()),
+                    parseInt($('#q10').val().trim())
+                ]
+            };
+            console.log(newMember)
+            $.post('/api/friends', newMember)
+                .then(function (data) {
+                    $('#friendName').text(data.bestyName);
+                    $('#myModal').modal('show')
+                    console.log(data);
+                    
+                });
+                    $('#nameInput').val(""),
+                    $('#q1').val(""),
+                    $('#q2').val(""),
+                    $('#q3').val(""),
+                    $('#q4').val(""),
+                    $('#q5').val(""),
+                    $('#q6').val(""),
+                    $('#q7').val(""),
+                    $('#q8').val(""),
+                    $('#q9').val(""),
+                    $('#q10').val("")
+            }
+        });
+    });
+</script>
